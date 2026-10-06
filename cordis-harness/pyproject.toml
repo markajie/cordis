@@ -1,0 +1,20 @@
+[project]
+name = "cordis-harness"
+version = "0.1.0"
+description = "AI coding assistant runtime built on Cordis plugin framework"
+readme = "README.md"
+requires-python = ">=3.15"
+dependencies = [
+    "cordis",
+    "httpx>=0.27",
+]
+
+[project.scripts]
+cordis-harness = "cordis_harness:main"
+
+[tool.uv.sources]
+cordis = { path = "..", editable = true }
+
+[build-system]
+requires = ["uv_build>=0.12.7,<0.13.0"]
+build-backend = "uv_build"
